@@ -332,7 +332,7 @@ Public Function gridFormatearColumnas(grid As GridView) As Gridview
   Dim f As New Font
 
   f.name = "Sans"
-  f.size = Me.sizefont
+  f.size = sizefont
   Me.formatearFechaIdioma()
   Me.arrayAnchoColumnas = New Integer[]
   With grid
@@ -355,7 +355,7 @@ Public Function gridFormatearColumnas(grid As GridView) As Gridview
     .Columns[4].width = -1 'f.textwidth(("fecha")&"m")
     Me.arrayAnchoColumnas.add(-1)
     .font.name = "Sans"
-    .font.size = Me.sizefont
+    .font.size = sizefont
     .Background = 16777215
     .Foreground = 0
   End With
@@ -370,7 +370,7 @@ Public Function gridFormatearFilas(grid As GridView) As Gridview
   Dim f As New Font
 
   f.name = "Sans"
-  f.size = Me.sizefont
+  f.size = sizefont
   With grid
     .header = 3
     .rows.count = 5
@@ -549,7 +549,7 @@ Public Sub Observar_Data(row As Integer, column As Integer)
   Dim datocontenido As Variant
 
   f.name = "Sans"
-  f.size = Me.sizefont
+  f.size = sizefont
 
   '-------------------------------------------
   'colores....filas impar / par ge regillas

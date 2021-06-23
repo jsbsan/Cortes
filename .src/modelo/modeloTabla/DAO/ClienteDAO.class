@@ -1,6 +1,7 @@
 ' Gambas class file
 
 Inherits PersonaDAO
+Public sizefont As Float = 10
 
 Public Function Total() As Integer
 
@@ -597,13 +598,14 @@ Public Function GridResultanteSQL(res As Result, grid As GridView) As Gridview
 
 End
 
+
 Public hresultadoNuevo As Result
 Public gridviewPropio As GridView 'para tener acceso desde clases heredadas
-Public actualiza As Observer
+ Public actualiza As Observer
 
 Public iconoTrue As String = "icon:/16/apply"
 Public iconoFalse As String = "icon:/16/cancel"
-Public sizefont As Integer = 10
+
 
 Public formatoFecha As String
 

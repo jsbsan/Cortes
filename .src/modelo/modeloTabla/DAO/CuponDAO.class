@@ -521,7 +521,7 @@ Public actualiza As Observer
 
 Public iconoTrue As String = "icon:/16/apply"
 Public iconoFalse As String = "icon:/16/cancel"
-Public sizefont As Integer = 10
+Public sizefont As Float = 10
 
 Public formatoFecha As String
 
@@ -585,7 +585,7 @@ Public Sub Observar_Data(row As Integer, column As Integer)
   Dim datocontenido As Variant
 
   f.name = "Sans"
-  f.size = Me.sizefont
+  f.size = sizefont
 
   '-------------------------------------------
   'colores....filas impar / par ge regillas

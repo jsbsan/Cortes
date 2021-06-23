@@ -144,15 +144,17 @@ Public Function GridResultanteSQL(res As Result, grid As GridView) As Gridview
 
 End
 
-Public hresultadoNuevo As Result
-Public gridviewPropio As GridView 'para tener acceso desde clases heredadas
-Public actualiza As Observer
+' FIXME: anulo para que no de problemas en hijos
 
-Public iconoTrue As String = "icon:/16/apply"
-Public iconoFalse As String = "icon:/16/cancel"
-Public sizefont As Integer = 10
-
-Public formatoFecha As String
+' Public hresultadoNuevo As Result
+' Public gridviewPropio As GridView 'para tener acceso desde clases heredadas
+' Public actualiza As Observer
+' 
+' Public iconoTrue As String = "icon:/16/apply"
+' Public iconoFalse As String = "icon:/16/cancel"
+' Public sizefont As Float = 10
+' 
+' Public formatoFecha As String
 
 Public Sub MostrarGridView(gridviewtrabajo As GridView, Optional cadenaSQL As String, Optional resultado As Result)
 
@@ -193,7 +195,7 @@ Public Sub Observar_Data(row As Integer, column As Integer)
 End
 
 'Array que contiene los valores del ancho de las columnas.
-Public arrayAnchoColumnas As New Integer[]
+'Public arrayAnchoColumnas As New Integer[]
 
 'AsignaAnchoGrid
 Public Sub AsignaAnchoGrid()
@@ -207,7 +209,7 @@ End
 '-----------------------------------------------------
 'añadido ordenar por columnas haciendo click...
 '-----------------------------------------------------
-Public ordenlistado As Integer
+'Public ordenlistado As Integer
 
 Public Sub ord_AZ(grid As GridView, a As Integer)
 
@@ -230,7 +232,7 @@ Public Function extraeColumnaArray(datos As PersonaVO[], nombrecampo As String) 
 
 End
 
-Public FormularioTitulo As String
+'Public FormularioTitulo As String
 
 Public Sub FormularioRegistrar(numeropaneles As Integer)
 

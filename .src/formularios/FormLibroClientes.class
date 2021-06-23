@@ -49,7 +49,13 @@ Public Sub mostrarNotasClientes()
 
   Dim idcliente As String
 
-  idcliente = Split(ComboBoxCliente.text, "|")[0]
+
+ Try idcliente = Split(ComboBoxCliente.text, "|")[0]
+ 
+ If Error Then 
+   Message.Info("No es posible Mostrar notas")
+   Return 
+ Endif
   manejarNotas.MostrarGridView(GridViewNotas, "select * from notas where idcliente='" & idcliente & "' order by fecha DESC")
 
 End
