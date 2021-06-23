@@ -1,0 +1,64 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,119,60)
+  Icon = Picture["icon:/16/people"]
+  Resizable = False
+  Arrangement = Arrange.Row
+  { Menu1 Menu
+    Text = ("Menu1")
+    Visible = False
+    { add Menu
+      Text = ("Añadir")
+      Picture = Picture["icon:/16/add"]
+    }
+    { Editar Menu
+      Text = ("Editar")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { Filtrar Menu
+      Text = ("Filtrar")
+      Picture = Picture["icon:/16/filter"]
+    }
+    { QuitarFiltro Menu
+      Text = ("Quitar Filtro")
+      Picture = Picture["icon:/16/close"]
+    }
+    { Borrar Menu
+      Text = ("Borrar")
+      Picture = Picture["icon:/16/delete"]
+      Enabled = False
+    }
+  }
+  { LabelTitulo Label
+    MoveScaled(0,0,87,5)
+    Font = Font["Italic,+3"]
+    Expand = True
+    Text = ("Titulo")
+    Alignment = Align.Center
+  }
+  { ColumnViewTabla ColumnView
+    MoveScaled(82,0,31,5)
+    Visible = False
+    Expand = True
+    PopupMenu = "Menu1"
+  }
+  { GridView1 GridView
+    MoveScaled(0,6,119,44)
+    Expand = True
+    PopupMenu = "Menu1"
+    Mode = Select.Single
+  }
+  { Panel1 Panel
+    MoveScaled(1,50,111,7)
+    { ButtonSalir Button
+      MoveScaled(91,1,17,5)
+      Text = ("Cancelar")
+      Picture = Picture["icon:/16/close"]
+    }
+    { TextLabel1 TextLabel
+      MoveScaled(1,1,87,5)
+      Text = ("Nota:<br>\nPulsar el boton izquierdo para acceder al menú. Y doble click para elergir registro.")
+    }
+  }
+}

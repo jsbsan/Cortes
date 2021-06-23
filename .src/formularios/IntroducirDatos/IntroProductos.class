@@ -1,0 +1,69 @@
+' Gambas class file
+
+' Gambas class file
+
+Private modo As String
+Private manejador As New ProductoDAO
+
+Private indice As Integer
+
+Public Sub Form_Open()
+
+End
+
+Public Sub setmodo(tipo As String, prodVo As ProductoVO, proDao As ProductoDAO)
+
+  If tipo = "add" Then
+    'estamos añadiendon
+    modo = "add"
+    Me.Title = "Añadiendo Registro"
+  Else
+    modo = "editar"
+
+    TextBoxCodigo.text = prodVo.codigo
+    TextAreaComentario.text = prodVo.comentario
+    TextBoxUbicacion.text = prodVo.ubicacion
+    TextBoxNombre.text = prodVo.nombre
+    TextBoxUbicacion.text = prodVo.ubicacion
+    ValueBoxPrecio.text = prodVo.precio
+
+    Me.Title = "Editando Registro"
+  Endif
+  manejador = proDao
+  Me.Showmodal()
+
+End
+
+Public Sub setindice(i As Integer)
+
+  indice = i
+
+End
+
+Public Sub ButtonAceptar_Click()
+
+  Dim proDatos As New ProductoVO
+
+  proDatos.codigo = TextBoxCodigo.Text
+  proDatos.comentario = TextAreaComentario.Text
+  proDatos.nombre = TextBoxNombre.Text
+  proDatos.precio = ValueBoxPrecio.Value
+  proDatos.ubicacion = TextBoxUbicacion.Text
+
+  If modo = "add" Then
+    manejador.registrar(proDatos)
+
+  Else
+    'editando
+    proDatos.id = indice
+    manejador.ModificarId(indice, proDatos)
+  Endif
+  Me.Close()
+
+End
+
+Public Sub ButtonCancelar_Click()
+
+  Me.Close()
+
+End

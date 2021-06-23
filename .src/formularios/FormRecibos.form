@@ -1,0 +1,288 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,142,77)
+  Icon = Picture["peluqueria1.jpg"]
+  Resizable = False
+  { Menu Menu
+    Text = ("Menu")
+    { MenuAgenda Menu
+      Text = ("Agenda Plan")
+      Picture = Picture["icon:/16/calendar"]
+      Enabled = False
+    }
+    { m3 Menu
+    }
+    { Servicios Menu
+      Text = ("Servicios")
+      Picture = Picture["peluqueria.jpg"]
+      Visible = False
+    }
+    { productos Menu
+      Text = ("Productos")
+      Visible = False
+    }
+    { cupones Menu
+      Text = ("Cupones")
+      Visible = False
+    }
+    { Menu1 Menu
+      Visible = False
+    }
+    { clientes Menu
+      Text = ("Clientes")
+      Picture = Picture["icon:/16/people"]
+      Visible = False
+    }
+    { empleados Menu
+      Text = ("Empleados")
+      Visible = False
+    }
+    { Menu4 Menu
+    }
+    { historico Menu
+      Text = ("Historico de Recibos")
+      Picture = Picture["icon:/16/book"]
+    }
+    { Menu3 Menu
+    }
+    { ListadoVentas Menu
+      Text = ("Listado de Productos Vendidos por Empleado")
+      Picture = Picture["documentos.png"]
+    }
+    { Menu6 Menu
+    }
+    { AlmacenProductos Menu
+      Text = ("Almacén: Entrada Productos")
+      Visible = False
+    }
+    { inventario Menu
+      Text = ("Almacén: Inventario de Productos")
+      Visible = False
+    }
+    { Menu2 Menu
+    }
+    { Configurar Menu
+      Action = "configurar"
+      Text = ("Configurar")
+      Picture = Picture["config16.png"]
+    }
+    { Ayuda Menu
+      Text = ("Ayuda")
+      Picture = Picture["icon:/16/help"]
+    }
+    { espacio Menu
+    }
+    { Salir Menu
+      Text = ("Salir")
+      Picture = Picture["icon:/16/quit"]
+    }
+  }
+  { Label1 Label
+    MoveScaled(1,7,12,5)
+    Alignment = Align.Right
+    Text = ("Empleado:")
+  }
+  { Label2 Label
+    MoveScaled(62,7,8,5)
+    Alignment = Align.Right
+    Text = ("Cliente:")
+  }
+  { LabelDescripcion Label
+    MoveScaled(19,13,67,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Descripción")
+  }
+  { LabelCantidad Label
+    MoveScaled(86,13,11,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Cantidad")
+  }
+  { LabelPrecio Label
+    MoveScaled(97,13,9,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Precio")
+  }
+  { LabelDescuento Label
+    MoveScaled(106,13,9,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("dto %")
+  }
+  { LabelIva Label
+    MoveScaled(115,13,6,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("IVA")
+  }
+  { LabelTotal Label
+    MoveScaled(121,13,18,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Total")
+  }
+  { ScrollView1 ScrollView
+    MoveScaled(2,17,137,47)
+    Arrangement = Arrange.Row
+  }
+  { Button1 Button
+    MoveScaled(121,7,18,5)
+    Text = ("Añadir linea")
+    Picture = Picture["icon:/16/add"]
+  }
+  { Label3 Label
+    MoveScaled(25,66,25,7)
+    Font = Font["+4"]
+    Alignment = Align.Center
+    Text = ("Importe:")
+  }
+  { LabelSumaTotal Label
+    MoveScaled(51,66,31,7)
+    Font = Font["Bold,+3"]
+    Background = &H007FFF&
+    Foreground = &HFFFFFF&
+    Alignment = Align.Center
+    Border = Border.Plain
+  }
+  { ButtonGuardarImprimir Button
+    MoveScaled(83,66,27,7)
+    Text = ("Generar Recibo")
+    Picture = Picture["recibo.png"]
+  }
+  { TimerRecalcular #Timer
+    #MoveScaled(1,58)
+    Delay = 500
+  }
+  { ButtonSalir Button
+    MoveScaled(127,66,14,7)
+    Text = ("Salir")
+    Picture = Picture["icon:/32/quit"]
+  }
+  { LabelFecha Label
+    MoveScaled(18,0,30,6)
+    Font = Font["Bold,+1"]
+    Alignment = Align.Center
+  }
+  { TimerFecha #Timer
+    #MoveScaled(1,53)
+    Delay = 500
+  }
+  { TextBoxEmpleado TextBox
+    MoveScaled(14,7,42,5)
+    Background = &HBFBFBF&
+    Foreground = &H000000&
+    ReadOnly = True
+  }
+  { ButtonBuscarEmpleado Button
+    MoveScaled(56,7,6,5)
+    Picture = Picture["icon:/16/find"]
+  }
+  { TextBoxCliente TextBox
+    MoveScaled(71,7,42,5)
+    Background = &HBFBFBF&
+    Foreground = &H000000&
+    ReadOnly = True
+  }
+  { ButtonBuscarCliente Button
+    MoveScaled(113,7,6,5)
+    Picture = Picture["icon:/16/find"]
+  }
+  { LabelId Label
+    MoveScaled(8,13,11,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Id")
+  }
+  { LabelTabla Label
+    MoveScaled(5,13,3,3)
+    Font = Font["Bold"]
+    Background = &H2FBF9B&
+    Foreground = &H000000&
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("T")
+  }
+  { ButtonNuevo Button
+    MoveScaled(1,0,18,6)
+    ToolTip = ("recibo nuevo")
+    Text = ("Nuevo Recibo")
+    Picture = Picture["icon:/16/new"]
+  }
+  { ButtonAgenda Button
+    MoveScaled(76,0,15,6)
+    ToolTip = ("agenda")
+    Text = ("Agenda")
+    Picture = Picture["icon:/16/calendar"]
+  }
+  { ButtonHistoricoRecibos Button
+    MoveScaled(92,0,15,6)
+    ToolTip = ("Historico de Recibos")
+    Text = ("Historico")
+    Picture = Picture["icon:/16/book"]
+  }
+  { ButtonInforme Button
+    MoveScaled(108,0,15,6)
+    ToolTip = ("Informe de Empleados")
+    Text = ("Informes")
+    Picture = Picture["documentos.png"]
+  }
+  { ButtonConfigurar Button
+    MoveScaled(124,0,15,6)
+    ToolTip = ("Configurar")
+    Text = ("Configurar")
+    Picture = Picture["config16.png"]
+  }
+  { ButtonEntradas Button
+    MoveScaled(50,0,25,6)
+    Text = ("Gestión Almacén")
+    Picture = Picture["almacen-icono-5695-48(1).png"]
+  }
+  { ButtonAbrirCajon Button
+    MoveScaled(112,66,10,7)
+    ToolTip = ("Abrir cajon monedero")
+    Picture = Picture["cajon monedero.png"]
+  }
+  { Button2 Button
+    MoveScaled(13,65,15,8)
+    ToolTip = ("Libro De Clientes para llevar apuntados los tratamientos")
+    Picture = Picture["libroClientes.png"]
+  }
+  { ButtonAcercaDE Button
+    MoveScaled(1,65,9,8)
+    Picture = Picture["icono_sobre_nosotros.png"]
+  }
+}
+
+# Gambas Action File 3.0
+
+{ Actions
+  { Action configurar
+    Text = "Configurar"
+    Shortcut = ""
+    Picture = "config16.png"
+  }
+}

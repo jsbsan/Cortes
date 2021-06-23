@@ -1,0 +1,39 @@
+' Gambas module file
+
+Private hconn As Connection
+
+Private ruta As String = User.home &/ ".peluqueria"
+Private nombreBD As String = "Cortes"
+
+Public Function ConectarBase() As Connection
+
+  hconn = New Connection
+  hconn.host = ruta
+  hconn.name = nombreBD
+  hconn.type = "sqlite3"
+
+  Try hconn.Open()
+
+  If Error Then
+    Message.Info(("Error al conectarse a la base de datos"))
+    Print Error.Text
+    Print Error.Where
+    Print Error.Code
+  Else
+    Return hconn
+  Endif
+
+  Return Null
+
+End
+
+Public Function copiarBase()
+
+  If Exist(ruta & "/" & nombreBD) Then
+    'existe el archivo, no hago nada.
+  Else
+    Try Mkdir ruta
+    Try Copy nombreBD To ruta & "/" & nombreBD
+  Endif
+
+End

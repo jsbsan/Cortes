@@ -1,0 +1,65 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,101,54)
+  Icon = Picture["almacen-icono-5695-48(1).png"]
+  Arrangement = Arrange.Vertical
+  { Menu1 Menu
+    Text = ("Menu1")
+    Visible = False
+    { Albaran Menu
+      Text = ("Albaranes:")
+    }
+    { Menu2 Menu
+    }
+    { addentrada Menu
+      Text = ("Añadir Entrada/Rotura/Robo")
+      Picture = Picture["icon:/16/add"]
+    }
+    { editarentrada Menu
+      Text = ("Editar")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { filtradoFecha Menu
+      Text = ("Filtrar por Fecha")
+      Picture = Picture["icon:/16/calendar"]
+    }
+    { quitafiltro Menu
+      Text = ("Quitar Filtro")
+      Picture = Picture["icon:/16/filter"]
+    }
+    { Borrar Menu
+      Text = ("Borrar")
+      Picture = Picture["icon:/16/erase"]
+      Enabled = False
+    }
+  }
+  { HBox1 HBox
+    MoveScaled(3,0,91,7)
+    { Label1 Label
+      MoveScaled(15,1,60,6)
+      Font = Font["+3"]
+      Expand = True
+      Text = ("Listado de albaranes de almacén")
+      Alignment = Align.Center
+    }
+  }
+  { GridView1 GridView
+    MoveScaled(0,8,100,34)
+    Expand = True
+    PopupMenu = "Menu1"
+    Mode = Select.Single
+  }
+  { HBox2 HBox
+    MoveScaled(5,44,71,5)
+    { HBox3 HBox
+      MoveScaled(12,2,18,1)
+      Expand = True
+    }
+    { ButtonSalir Button
+      MoveScaled(51,0,16,4)
+      Text = ("Cerrar")
+      Picture = Picture["icon:/16/cancel"]
+    }
+  }
+}

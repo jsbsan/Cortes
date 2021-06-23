@@ -1,0 +1,77 @@
+' Gambas class file
+
+Private datos As LineaAlmacenVO
+
+Public Sub Form_Open()
+
+  If ComboBoxTipo.text = "" Then ComboBoxTipo.text = ComboBoxTipo.List[0] ' "ENTRADA"
+  If DateBoxFecha.value = 0 Then DateBoxFecha.value = Now
+  Me.center
+
+End
+
+Public Sub ButtonCancelar_Click()
+
+  datos = Null
+  Me.Close()
+
+End
+
+Public Sub ButtonBuscarProducto_Click()
+
+  Dim nombre As New Variant[]
+
+  FormServicios.setnombre(nombre)
+  FormServicios.irtab(1, "no mostrar", "mostrar", "no mostrar") 'aqui indicar que las pestañas servicos y cupones no estan disponibles...
+  FormServicios.ShowModal()
+  If nombre[0] = Null Then
+    'no ha hecho doble click en ningun servicio/producto/cupon
+    LabelProducto.Tag = 0
+  Else
+    LabelProducto.tag = nombre[1] 'id producto
+    LabelProducto.text = nombre[2] 'descripcion
+
+  Endif
+
+End
+
+Public Sub ButtonAceptar_Click()
+
+  If LabelProducto.Tag <> 0 Then
+    datos.fecha = DateBoxFecha.Value
+    datos.idProducto = LabelProducto.Tag
+    datos.cantidad = ValueBoxCantidad.Value
+    '  datos.tipo = ComboBoxTipo.Text ''NOTE: hacer cambio aqui...
+
+    Select Case ComboBoxTipo.Index
+      Case 0 'ENTRADA
+        datos.tipo = "ENTRADA"
+      Case 1 'ROBO
+        datos.tipo = "ROBO"
+      Case 2 'ROTURA
+        datos.tipo = "ROTURA"
+    End Select
+
+    Me.Close()
+  Else
+    Message.Info(("Debe de elegir un producto"))
+  Endif
+
+End
+
+Public Sub setDatos(d As LineaAlmacenVO, Optional DescripcionProducto As String)
+
+  If d = Null Then
+    datos = d
+
+  Else
+    datos = d
+    ValueBoxCantidad.Value = datos.cantidad
+    LabelProducto.Tag = datos.idProducto
+    ComboBoxTipo.Text = datos.tipo
+    DateBoxFecha.value = datos.fecha
+    LabelProducto.text = DescripcionProducto
+
+  Endif
+
+End

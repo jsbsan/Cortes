@@ -1,0 +1,126 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,96,61)
+  Resizable = False
+  { TabStrip1 TabStrip
+    MoveScaled(2,7,91,47)
+    Font = Font["+2"]
+    Count = 3
+    Index = 0
+    Text = ("Empleados")
+    Picture = Picture["empleadoS.png"]
+    { ComboBoxEmpleado ComboBox
+      MoveScaled(29,3,43,5)
+      ReadOnly = True
+      Text = ("ComboBox1")
+    }
+    { Label1 Label
+      MoveScaled(4,3,22,5)
+      Text = ("Empleado:")
+      Alignment = Align.Right
+    }
+    { Frame1 Frame
+      MoveScaled(8,10,75,29)
+      Text = ("Listado desde.... hasta ....")
+      { Label3 Label
+        MoveScaled(-1,7,20,4)
+        Text = ("Desde:")
+        Alignment = Align.Right
+      }
+      { Label2 Label
+        MoveScaled(-1,13,20,4)
+        Text = ("Hasta:")
+        Alignment = Align.Right
+      }
+      { DateBoxDesde DateBox
+        MoveScaled(24,7,21,4)
+      }
+      { DateBoxHasta DateBox
+        MoveScaled(24,13,21,4)
+      }
+      { ButtonConsultaEmpleado Button
+        MoveScaled(50,10,23,6)
+        ToolTip = ("Realiza la consulta")
+        Text = ("Consultar")
+        Picture = Picture["documentos.png"]
+      }
+    }
+    { PictureBox2 PictureBox
+      MoveScaled(77,1,10,10)
+      Picture = Picture["empleadoS.png"]
+      Stretch = True
+    }
+    Index = 1
+    Text = ("Clientes")
+    Picture = Picture["clienta.png"]
+    { Frame2 Frame
+      MoveScaled(8,10,75,29)
+      Text = ("Listado desde.... hasta ....")
+      { Label4 Label
+        MoveScaled(-1,7,20,4)
+        Text = ("Desde:")
+        Alignment = Align.Right
+      }
+      { Label5 Label
+        MoveScaled(-1,13,20,4)
+        Text = ("Hasta:")
+        Alignment = Align.Right
+      }
+      { DateBoxDesdeCliente DateBox
+        MoveScaled(24,7,21,4)
+      }
+      { DateBoxHastaCliente DateBox
+        MoveScaled(24,13,21,4)
+      }
+      { ButtonConsultaCliente Button
+        MoveScaled(50,10,23,6)
+        ToolTip = ("Realiza la consulta")
+        Text = ("Consultar")
+        Picture = Picture["documentos.png"]
+      }
+    }
+    { ComboBoxCliente ComboBox
+      MoveScaled(29,3,43,5)
+      ReadOnly = True
+      Text = ("ComboBox1")
+    }
+    { Label6 Label
+      MoveScaled(4,3,22,5)
+      Text = ("Cliente:")
+      Alignment = Align.Right
+    }
+    { PictureBox1 PictureBox
+      MoveScaled(76,1,10,10)
+      Picture = Picture["clienta.png"]
+      Stretch = True
+    }
+    Index = 2
+    Text = ("Inventario")
+    Picture = Picture["inventario.png"]
+    { ButtonInventario Button
+      MoveScaled(3,7,86,8)
+      Font = Font["-1"]
+      Text = ("Crear Informe de inventario:Entradas,Ventas,Roturas,Robos y Existencias Almacen")
+      Picture = Picture["almacen-icono-5695-48(1).png"]
+    }
+    { ButtonInventarioValorado Button
+      MoveScaled(2,20,86,8)
+      Font = Font["-1"]
+      Text = ("Crear Informe de inventario con valoración de productos")
+      Picture = Picture["almacendolar.png"]
+    }
+    Index = 0
+  }
+  { ButtonSalir Button
+    MoveScaled(39,55,22,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/16/quit"]
+  }
+  { Label7 Label
+    MoveScaled(4,0,87,5)
+    Font = Font["Bold,Underline,+3"]
+    Text = ("INFORMES")
+    Alignment = Align.Center
+  }
+}

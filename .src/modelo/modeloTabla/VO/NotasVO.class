@@ -1,0 +1,127 @@
+' Gambas class file
+
+Property id As Integer
+Private hid As Integer
+
+Property idcliente As Integer
+Private hidcliente As Integer
+
+Property fecha As Date
+Private hfecha As Date
+
+Property Comentario As String
+Private hComentario As String
+
+Property campo As String[]
+Private hcampo As New String[]
+
+Property campotipo As String[]
+Private hcampotipo As New String[]
+
+Property campovisible As String[]
+Private hcampovisible As New String[]
+
+Private Function id_read() As Integer
+
+  Return hid
+
+End
+
+Private Sub id_write(Valor As Integer)
+
+  hid = Valor
+
+End
+
+Private Function idcliente_read() As Integer
+
+  Return hidcliente
+
+End
+
+Private Sub idcliente_write(Valor As Integer)
+
+  hidcliente = Valor
+
+End
+
+Private Function fecha_read() As Date
+
+  Return hfecha
+
+End
+
+Private Sub fecha_write(Valor As Date)
+
+  hfecha = Valor
+
+End
+
+Private Function Comentario_read() As String
+
+  Return hComentario
+
+End
+
+Private Sub Comentario_write(Valor As String)
+
+  hComentario = Valor
+
+End
+
+Private Function campo_read() As String[]
+
+  Return hcampo
+
+End
+
+Private Sub campo_write(Valor As String[])
+
+  hcampo = Valor
+
+End
+
+Private Function campotipo_read() As String[]
+
+  Return hcampotipo
+
+End
+
+Private Sub campotipo_write(Valor As String[])
+
+  hcampotipo = Valor
+
+End
+
+Private Function campovisible_read() As String[]
+
+  Return hcampovisible
+
+End
+
+Private Sub campovisible_write(Valor As String[])
+
+  hcampovisible = Valor
+
+End
+
+Public Function ConvertirVOaColeccion(dato As NotasVO) As Collection
+
+  Dim colecciontmp As New Collection
+  colecciontmp.add(dato.id, "id")
+  colecciontmp.add(dato.idcliente, "idcliente")
+  colecciontmp.add(dato.fecha, "fecha")
+  colecciontmp.add(dato.Comentario, "Comentario")
+  Return colecciontmp
+
+End
+
+Public Function ConvertirColeccionaVO(dato As Collection) As NotasVO
+
+  Dim datoVOtmp As New NotasVO
+Try datoVOtmp.id = dato["id"]
+Try datoVOtmp.idcliente = dato["idcliente"]
+Try datoVOtmp.fecha = dato["fecha"]
+Try datoVOtmp.Comentario = dato["Comentario"]
+Return datoVOtmp
+End

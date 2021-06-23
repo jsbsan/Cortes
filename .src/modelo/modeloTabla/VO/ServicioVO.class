@@ -1,0 +1,127 @@
+' Gambas class file
+
+Property id As Integer
+Private hid As Integer
+
+Property nombre As String
+Private hnombre As String
+
+Property precio As Float
+Private hprecio As Float
+
+Property comentario As String
+Private hcomentario As String
+
+Property campo As String[]
+Private hcampo As New String[]
+
+Property campotipo As String[]
+Private hcampotipo As New String[]
+
+Property campovisible As String[]
+Private hcampovisible As New String[]
+
+Private Function id_read() As Integer
+
+  Return hid
+
+End
+
+Private Sub id_write(Valor As Integer)
+
+  hid = Valor
+
+End
+
+Private Function nombre_read() As String
+
+  Return hnombre
+
+End
+
+Private Sub nombre_write(Valor As String)
+
+  hnombre = Valor
+
+End
+
+Private Function precio_read() As Float
+
+  Return hprecio
+
+End
+
+Private Sub precio_write(Valor As Float)
+
+  hprecio = Valor
+
+End
+
+Private Function comentario_read() As String
+
+  Return hcomentario
+
+End
+
+Private Sub comentario_write(Valor As String)
+
+  hcomentario = Valor
+
+End
+
+Private Function campo_read() As String[]
+
+  Return hcampo
+
+End
+
+Private Sub campo_write(Valor As String[])
+
+  hcampo = Valor
+
+End
+
+Private Function campotipo_read() As String[]
+
+  Return hcampotipo
+
+End
+
+Private Sub campotipo_write(Valor As String[])
+
+  hcampotipo = Valor
+
+End
+
+Private Function campovisible_read() As String[]
+
+  Return hcampovisible
+
+End
+
+Private Sub campovisible_write(Valor As String[])
+
+  hcampovisible = Valor
+
+End
+
+Public Function ConvertirVOaColeccion(dato As ServicioVO) As Collection
+
+  Dim colecciontmp As New Collection
+  colecciontmp.add(dato.id, "id")
+  colecciontmp.add(dato.nombre, "nombre")
+  colecciontmp.add(dato.precio, "precio")
+  colecciontmp.add(dato.comentario, "comentario")
+  Return colecciontmp
+
+End
+
+Public Function ConvertirColeccionaVO(dato As Collection) As ServicioVO
+
+  Dim datoVOtmp As New ServicioVO
+Try datoVOtmp.id = dato["id"]
+Try datoVOtmp.nombre = dato["nombre"]
+Try datoVOtmp.precio = dato["precio"]
+Try datoVOtmp.comentario = dato["comentario"]
+Return datoVOtmp
+End

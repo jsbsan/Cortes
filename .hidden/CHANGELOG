@@ -1,0 +1,140 @@
+* Wed Jun 23 2021 julio sanchez berro <jusabejusabe@gmail.com> 0.3.2
+- sin usar la agenda "plan"
+
+* Wed Jun 23 2021 julio sanchez berro <jusabejusabe@gmail.com> 0.3.1
+- QT4 A QT5
+
+* Thu Jan 15 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.3.0
+
+* Thu Jan 15 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.3.0
+
+* Thu Jan 15 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.3.0
+- agregado boton de Acerca de... en formulario de recibo
+
+* Thu Jan 15 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.3.0
+
+* Thu Jan 15 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.3.0
+- corregido error de filtro en clientes y empleados
+
+* Sun Jan 11 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.9
+- corregido bug en la 0.2.8, no se podia imprimir los ticket en historico de ticket
+
+* Fri Jan 09 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.8
+- corregido bug en la 0.2.7, que no funcionaba el empleado/cliente por defecto
+
+* Thu Jan 08 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.7
+- errores al mostrar algunos recibos por problemas de conversion de fecha y
+- corregido problema de inicio de albaran cuando no estan definidos empleados ni clientes
+
+* Sun Jan 04 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.6
+- sin dependencia tee
+
+* Sun Jan 04 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.5
+
+* Sun Jan 04 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.5
+- traducido
+
+* Sun Jan 04 2015 julio sanchez berro <jusabejusabe@gmail.com> 0.2.5
+- usb cajon añadido
+
+* Sat Dec 27 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.2.1
+
+* Sat Dec 27 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.2.1
+- completa traducido portugues (menos gridviews)
+
+* Sat Dec 20 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.9
+- Parte traducido al portugues
+
+* Sun Nov 09 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.8
+- comprobar estructura
+
+* Thu Nov 06 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.7
+
+* Thu Nov 06 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.7
+- Copia de seguridad, menu borrar ahora esta desactivado
+
+* Tue Oct 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Tue Oct 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Tue Oct 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Tue Oct 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Tue Oct 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+- corregido problema de copia de bd cortes
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Mon Oct 13 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.6
+
+* Sun Sep 14 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.1.5
+- sistema de gestion almacen
+
+* Fri Aug 08 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.7
+
+* Fri Aug 08 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.7
+- informe de clientes
+
+* Sat Aug 02 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.6
+- update añadido al inicio del programa
+
+* Sat Aug 02 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.6
+- CUPON EN NEGATIVO Y SIN IVA. Deteccion de instalado plan y wkhtmltopdf
+
+* Thu Jul 31 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- dimensiones de grid de muestra de datos
+
+* Thu Jul 31 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- mejoras en sql
+
+* Tue Jul 29 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- corregido bug de busqueda sql entre fecha
+
+* Thu Jul 31 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- incluyendo plan
+
+* Wed Jul 30 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- mejora informe que no salia
+
+* Wed Jul 30 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- update
+
+* Wed Jul 30 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.5
+- a
+
+* Fri Jul 18 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.1
+
+* Thu Jul 17 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.1
+
+* Thu Jul 17 2014 julio sanchez berro <jusabejusabe@gmail.com> 0.0.1
+- Lanzamiento inicial
+

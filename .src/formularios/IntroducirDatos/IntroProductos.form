@@ -1,0 +1,58 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,84,50)
+  Resizable = False
+  { TextBoxCodigo TextBox
+    MoveScaled(19,2,26,4)
+  }
+  { TextBoxNombre TextBox
+    MoveScaled(19,7,63,4)
+  }
+  { TextBoxUbicacion TextBox
+    MoveScaled(19,12,63,4)
+  }
+  { ValueBoxPrecio ValueBox
+    MoveScaled(19,17,14,4)
+    Text = ("ValueBox1")
+  }
+  { TextAreaComentario TextArea
+    MoveScaled(0,28,82,15)
+    Wrap = True
+  }
+  { Label1 Label
+    MoveScaled(1,7,16,4)
+    Text = ("Producto:")
+    Alignment = Align.Right
+  }
+  { Label2 Label
+    MoveScaled(1,2,16,4)
+    Text = ("Codigo:")
+    Alignment = Align.Right
+  }
+  { Label3 Label
+    MoveScaled(1,12,16,4)
+    Text = ("Ubicación:")
+    Alignment = Align.Right
+  }
+  { Label4 Label
+    MoveScaled(1,17,16,4)
+    Text = ("Precio:")
+    Alignment = Align.Right
+  }
+  { Label6 Label
+    MoveScaled(0,22,16,5)
+    Text = ("Comentarios:")
+    Alignment = Align.Center
+  }
+  { ButtonCancelar Button
+    MoveScaled(53,44,13,5)
+    Text = ("Cancelar")
+    Picture = Picture["icon:/16/cancel"]
+  }
+  { ButtonAceptar Button
+    MoveScaled(68,44,13,5)
+    Text = ("Aceptar")
+    Picture = Picture["icon:/16/apply"]
+  }
+}

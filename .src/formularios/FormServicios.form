@@ -1,0 +1,115 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,100,60)
+  Icon = Picture["peluqueria1.jpg"]
+  Resizable = False
+  { MenuServicios Menu
+    Text = ("MenuServicios")
+    Visible = False
+    { AddServicios Menu
+      Text = ("Añadir")
+      Picture = Picture["icon:/16/add"]
+    }
+    { editarServicios Menu
+      Text = ("Editar")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { FiltroServicios Menu
+      Text = ("Filtrar")
+      Picture = Picture["icon:/16/filter"]
+    }
+    { QuitarFiltroServicios Menu
+      Text = ("Quitar filtro")
+      Picture = Picture["icon:/16/cancel"]
+    }
+    { BorrarServicios Menu
+      Text = ("Borrar")
+      Picture = Picture["icon:/16/erase"]
+    }
+  }
+  { MenuProductos Menu
+    Text = ("MenuProductos")
+    Visible = False
+    { addProductos Menu
+      Text = ("Añadir")
+      Picture = Picture["icon:/16/add"]
+    }
+    { editarProductos Menu
+      Text = ("Editar")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { FiltroProductos Menu
+      Text = ("Filtrar")
+      Picture = Picture["icon:/16/filter"]
+    }
+    { QuitarFiltroProductos Menu
+      Text = ("Quitar filtro")
+      Picture = Picture["icon:/16/cancel"]
+    }
+    { BorrarProductos Menu
+      Text = ("Borrar")
+      Picture = Picture["icon:/16/erase"]
+    }
+  }
+  { MenuCupones Menu
+    Text = ("MenuCupones")
+    Visible = False
+    { addCupones Menu
+      Text = ("Añade")
+      Picture = Picture["icon:/16/add"]
+    }
+    { editarCupones Menu
+      Text = ("Editar")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { FiltrarCupones Menu
+      Text = ("Filtrar")
+      Picture = Picture["icon:/16/filter"]
+    }
+    { QuitarFiltroCupones Menu
+      Text = ("Quitar filtro")
+      Picture = Picture["icon:/16/cancel"]
+    }
+    { BorrarCupones Menu
+      Text = ("Borrar")
+      Picture = Picture["icon:/16/erase"]
+    }
+  }
+  { TabStrip1 TabStrip
+    MoveScaled(1,1,97,51)
+    PopupMenu = "MenuProductos"
+    Count = 3
+    Index = 0
+    Text = ("Servicios")
+    { GridViewServicio GridView
+      MoveScaled(1,1,94,45)
+      PopupMenu = "MenuServicios"
+      Mode = Select.Single
+    }
+    Index = 1
+    Text = ("Productos")
+    { GridViewProducto GridView
+      MoveScaled(1,1,94,45)
+      PopupMenu = "MenuProductos"
+      Mode = Select.Single
+    }
+    Index = 2
+    Text = ("Cupones")
+    { GridViewCupon GridView
+      MoveScaled(1,1,94,45)
+      PopupMenu = "MenuCupones"
+      Mode = Select.Single
+    }
+    Index = 0
+  }
+  { ButtonSalir Button
+    MoveScaled(81,54,16,5)
+    Text = ("Cancelar")
+    Picture = Picture["icon:/16/cancel"]
+  }
+  { Label1 Label
+    MoveScaled(2,54,64,5)
+    Text = ("Nota:  Haga doble click para elegir un servicio/producto o cupon")
+  }
+}
